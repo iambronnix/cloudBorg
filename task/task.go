@@ -6,7 +6,7 @@ import (
 	"github.com/docker/go-connections/nat"
 	"github.com/google/uuid"
 )
-
+//defines states of a given task
 type state int
 
 const(
@@ -17,6 +17,7 @@ const(
 	Failed
 )
 
+//attributes of a task
 type Task struct{
 	ID uuid.UUID
 	Name string
@@ -31,6 +32,7 @@ type Task struct{
 	FinishTime time.Time
 }
 
+//used by a user to track a task
 type TaskEvent struct{
 	ID uuid.UUID
 	State state
